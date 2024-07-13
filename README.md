@@ -9,4 +9,6 @@
 
 Download App - Win64:
 
+<p><a href="https://github.com/Cpp-Gleb/StegLove/releases/tag/1.0">
 <img src="https://github.com/user-attachments/assets/5e7d8224-01cc-43ef-92d0-ca0877382554" href="https://rjomba.com" width="70" height="70" />
+</a></p>
