@@ -106,12 +106,20 @@ class App():
 
         @self.app.route('/api/<tool>', methods=['POST'])
         def api(tool):
-            tool = str(tool)
-            data = request.json
-            file = data.get('file')
-            path = self.save(file)
-            result = self.analyze(tool, path)
-            return jsonify(result)
+            try:
+                tool = str(tool)
+                data = request.json
+                file = data.get('file')
+                path = self.save(file)
+                result = self.analyze(tool, path)
+            except:
+                result = {
+                    'status': 'error',
+                    'tool': tool
+                }
+            finally:
+                return jsonify(result)
+
 
 
 if __name__ == '__main__':
