@@ -1,0 +1,8 @@
+команда для установки: 
+wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+chmod +x stegsolve.jar
+mkdir bin
+mv stegsolve.jar bin/
+
+полезная, одна из самых важных при работе с png утилита.
+Используется для анализа структуры файлов, изучения устройства стереограммы, а также самостоятельного рассмотрения каждой разрядной матрицы.

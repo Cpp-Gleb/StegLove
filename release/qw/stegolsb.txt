@@ -1,0 +1,7 @@
+offical cite: https://pypi.org/project/stego-lsb/
+команда для установки: 
+sudo apt install python3
+pip install stego-lsb
+
+Ищет информацию в картинках и аудио
+

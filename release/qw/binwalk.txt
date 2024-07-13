@@ -1,0 +1,6 @@
+official cite: https://github.com/ReFirmLabs/binwalk
+comand in linux: sudo apt install binwalk
+
+подробную информацию об утилите можно посмотреть пробив binwalk --help
+если слабо знакомы с linux системой, сначала просто пробивайте: binwalk "файл"(без кавычек)
+для извлечения: binwalk -e "файл"

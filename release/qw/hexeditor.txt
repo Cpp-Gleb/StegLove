@@ -1,0 +1,13 @@
+Не является конкретной утилитой, просто рекомендация Hex редакторов.
+
+HxD
+offical cite: https://mh-nexus.de/en/hxd/
+бесплатный, удобных хороший редактор hex кода.
+
+HexEd
+offical cite: https://hexed.it/
+онлайн редактор
+
+010 editor
+offical cite: https://www.sweetscape.com/010editor/
+Платный

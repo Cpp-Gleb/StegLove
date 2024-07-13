@@ -1,0 +1,6 @@
+offical cite: https://github.com/zed-0xff/zsteg
+команда для установки: 
+ sudo apt install ruby
+ sudo gem install zsteg
+полезная литература:
+https://900913.ru/tldr/common/en/zsteg/
