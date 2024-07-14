@@ -1,0 +1,4 @@
+offical cite: https://exiftool.org/
+команда утанеовки: sudo apt-get install exiftool
+
+команда смотрит методанные файла и выдает справочную информацию о файле
