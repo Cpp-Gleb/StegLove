@@ -1,0 +1,4 @@
+audacity
+hex Editor
+binwalk
+StegoLSB

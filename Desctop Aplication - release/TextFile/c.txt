@@ -1,0 +1,3 @@
+Clion
+Qt
+Visual Code

@@ -1,0 +1,5 @@
+Zsteg
+binwalk
+StegSolve
+hex Editor
+exiftool
