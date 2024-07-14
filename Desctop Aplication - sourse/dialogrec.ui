@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogRec</class>
+ <widget class="QDialog" name="DialogRec">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Рекомендации</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	font: 10pt &quot;JetBrains Mono&quot;;
+	color: #fff;
+	background-color:#212121;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="Label_com">
+     <property name="styleSheet">
+      <string notr="true">background-color: #2b2b2b;
+border-radius: 14px;
+font: 10pt &quot;JetBrains Mono&quot;;
+color: #00ff84;
+padding-left: 8px;
+</string>
+     </property>
+     <property name="text">
+      <string>Common Recomendations</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
