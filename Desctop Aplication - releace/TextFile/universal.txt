@@ -1,2 +1,0 @@
-Binwalk
-Hex editor

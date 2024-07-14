@@ -1,2 +1,0 @@
-Ghidra
-Ida Pro + Hex-Rays

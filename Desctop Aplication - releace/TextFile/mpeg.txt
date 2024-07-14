@@ -1,3 +1,0 @@
-Audacity
-binwalk
-Hex-Editor
