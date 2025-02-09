@@ -2,12 +2,12 @@ version: '3'
 services:
   flask:
     build: ./app
-    container_name: steglove-api
+    container_name: steglove
     environment:
       - PYTHONUNBUFFERED=True
-    restart: on-failure
+    restart: always
     volumes:
       - ./app:/app
     ports:
-      - "5000:5000"
+      - "127.0.0.1:5000:5000"
     command: gunicorn --workers 3 --bind 0.0.0.0:5000 wsgi:app --reload

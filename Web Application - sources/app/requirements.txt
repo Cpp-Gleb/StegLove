@@ -1,0 +1,7 @@
+flask
+flask[async]
+python-dotenv
+gunicorn
+pydantic
+pydantic_settings
+apscheduler
