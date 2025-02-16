@@ -5,3 +5,4 @@ gunicorn
 pydantic
 pydantic_settings
 apscheduler
+flask_cors

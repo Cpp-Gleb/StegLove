@@ -1,4 +1,3 @@
-version: '3'
 services:
   flask:
     build: ./app
@@ -10,4 +9,5 @@ services:
       - ./app:/app
     ports:
       - "127.0.0.1:5000:5000"
-    command: gunicorn --workers 3 --bind 0.0.0.0:5000 wsgi:app --reload
+#    command: gunicorn --workers 3 --bind 0.0.0.0:5000 wsgi:app --reload
+    command: python3 app.py

@@ -28,7 +28,41 @@
 			function uploadFile() {
 				$('input').click();
 			}
-
+			
+			function setupDragAndDrop() {
+				const dropZone = document.getElementById('drop-zone');
+			
+				dropZone.addEventListener('dragover', (e) => {
+					e.preventDefault();
+					dropZone.classList.add('dragover');
+				});
+			
+				dropZone.addEventListener('dragleave', () => {
+					dropZone.classList.remove('dragover');
+				});
+			
+				dropZone.addEventListener('drop', (e) => {
+					e.preventDefault();
+					dropZone.classList.remove('dragover');
+					const files = e.dataTransfer.files;
+					if (files.length > 0) {
+						handleFileUpload(files[0]);
+					}
+				});
+			}
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				const fileInput = document.getElementById('file-input');
+				fileInput.addEventListener('change', () => {
+					const file = fileInput.files[0];
+					if (file) {
+						handleFileUpload(file);
+					}
+				});
+			
+				setupDragAndDrop();
+			});
+			
 			function handleFileUpload(file) {
 				const tool = '{{ tool }}';
 				const reader = new FileReader();
@@ -74,40 +108,6 @@
 				};
 				reader.readAsArrayBuffer(file);
 			}
-
-			function setupDragAndDrop() {
-				const dropZone = document.getElementById('drop-zone');
-	
-				dropZone.addEventListener('dragover', (e) => {
-					e.preventDefault();
-					dropZone.classList.add('dragover');
-				});
-	
-				dropZone.addEventListener('dragleave', () => {
-					dropZone.classList.remove('dragover');
-				});
-	
-				dropZone.addEventListener('drop', (e) => {
-					e.preventDefault();
-					dropZone.classList.remove('dragover');
-					const files = e.dataTransfer.files;
-					if (files.length > 0) {
-						handleFileUpload(files[0]);
-					}
-				});
-			}
-
-			document.addEventListener('DOMContentLoaded', function() {
-				const fileInput = document.getElementById('file-input');
-				fileInput.addEventListener('change', () => {
-					const file = fileInput.files[0];
-					if (file) {
-						handleFileUpload(file);
-					}
-				});
-	
-				setupDragAndDrop();
-			});
 		</script>
 	</head>
 	<body class="body">
@@ -123,10 +123,12 @@
 						<div class="sessionsinnav">
 							<div class="text-block-8">
 								Sessions
-							</div><a data-w-id="dd7da530-8145-2ac9-4ff8-4f210cc753ee" href="#" class="sessionlink w-inline-block">
-							<div class="text-block-7">
-								SESSION 1 - Exiftool
-							</div></a>
+							</div>
+							{% for session_id, tool in data.items() %}
+								<a data-w-id="dd7da530-8145-2ac9-4ff8-4f210cc753ee" href="/session/{{ session_id }}" class="sessionlink w-inline-block">
+									<div class="text-block-7"> SESSION {{ session_id }} - {{ tool }}</div>
+								</a>
+							{% endfor %}
 						</div>
 					</nav><a id="w-node-_00423f68-edd9-7373-a48a-ffb7fa9904d3-5d58bebc" data-w-id="00423f68-edd9-7373-a48a-ffb7fa9904d3" href="https://github.com/Cpp-Gleb/StegLove" class="link-block-2 w-inline-block">
 					<div class="githubbutton">
@@ -144,7 +146,6 @@
 				<section class="section">
 					<div class="divider"></div>
 					<div id="drop-zone" class="fileupload drop-zone">
-						<input type="file" id="file-input" style="opacity: 0" required>
 						<a data-w-id="5a4f0c1e-ab58-b3e2-b646-9b553bb21d1a" style="cursor: pointer;" onclick="uploadFile()" class="link-block-3 w-inline-block"><img src="{{ url_for('static', filename='images/upload.webp') }}" loading="lazy" width="119" alt="mask-20group" class="image-2">
 						<div class="text-block-3">
 							Upload a file
@@ -157,10 +158,11 @@
 					</div>
 				</section>
 				<section class="section8">
-					<a data-w-id="44e838cb-9ef5-0a55-9d1c-da2aa9f4ca99" href="#" class="sessionlink w-inline-block">
-					<div class="text-block-7">
-						SESSION 1 - Exiftool
-					</div></a>
+					{% for session_id, tool in data.items() %}
+						<a data-w-id="dd7da530-8145-2ac9-4ff8-4f210cc753ee" href="/session/{{ session_id }}" class="sessionlink w-inline-block">
+							<div class="text-block-7"> SESSION {{ session_id }} - {{ tool }}</div>
+						</a>
+					{% endfor %}
 				</section>
 			</section>
 		</div>
@@ -168,7 +170,6 @@
 			<section class="section">
 				<div class="divider"></div>
 				<div id="drop-zone" class="fileupload drop-zone">
-					<input type="file" id="file-input" style="opacity: 0" required>
 					<a data-w-id="608cf64a-9d72-4f84-fe4f-d05192f9d841" style="cursor: pointer;" onclick="uploadFile()" class="link-block-3 w-inline-block"><img src="{{ url_for('static', filename='images/upload.webp') }}" loading="lazy" width="119" alt="mask-20group" class="image-2">
 					<div class="text-block-3">
 						Upload a file
@@ -180,6 +181,7 @@
 					</div>
 				</div>
 			</section>
+			<input type="file" id="file-input" style="display: none" required>
 		</div>
 		<script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer="defer"></script>
 		<script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>

@@ -1393,10 +1393,6 @@ textarea.w-input, textarea.w-select {
   display: block;
 }
 
-.w-dropdown-link.w--current {
-  color: #0082f3;
-}
-
 .w-dropdown-link:focus {
   outline: 0;
 }
@@ -1830,10 +1826,6 @@ textarea.w-input, textarea.w-select {
   text-decoration: none;
   display: inline-block;
   position: relative;
-}
-
-.w-nav-link.w--current {
-  color: #0082f3;
 }
 
 .w-nav-menu {
@@ -2287,6 +2279,8 @@ textarea.w-input, textarea.w-select {
 .rich-text-block {
   color: #00ff84;
   margin: 20px;
+  overflow: auto;
+  overflow-wrap: anywhere;
 }
 
 .paragraph {

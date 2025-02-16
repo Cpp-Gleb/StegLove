@@ -1,0 +1,27 @@
+-- uuid-list.cabal
+build-type:          Simple
+name:                uuid-list
+version:             0.1.0.0
+synopsis:            UUID list generator
+category:            Development
+author:              Your Name
+maintainer:          your.email@example.com
+license:             MIT
+license-file:        LICENSE
+extra-source-files:  README.md
+build-depends:
+    base >=4.14 && <5
+  , containers
+  , random
+  , text
+default-language:     Haskell2010
+
+executable: 
+  uuid-list:
+    main-is:             Main.hs
+    hs-source-dirs:      src
+    build-depends:       base >=4.14 && <5
+                       , containers
+                       , random
+                       , text
+  default-language:    Haskell2010
