@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html data-wf-page="669254fb573f48cb5d58bebc" data-wf-site="669254fb573f48cb5d58beb6" data-wf-status="1">
+	<head>
+		<title>Steglove</title>
+
+		<meta charset="utf-8">
+
+		<meta name="theme-color" content="#212121">
+		<meta name="title" content="Steglove">
+		<meta name="description" content="Simple steg tool">
+
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Steglove">
+		<meta property="og:description" content="Simple steg tool">
+		<meta property="og:image" content="https://www.crut0i.com/app-icon.png">
+		<meta property="og:image:secure_url" content="https://www.crut0i.com/app-icon.png">
+		<meta property="og:image:width" content="128">
+		<meta property="og:image:height" content="128">
+
+		<meta name="twitter:card" content="summary">
+		<meta property="twitter:title" content="Steglove"/>
+		<meta property="twitter:url" content="https://www.rjomba.com"/>
+		<meta property="twitter:description" content="Simple steg tool"/>
+
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+		<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" sizes="16x16 24x24 32x32 48x48 64x64">
+	</head>
+	<body class="body">
+		<div class="header">
+			<div data-animation="default" data-collapse="small" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+				<div class="buttons">
+					<a id="w-node-abb3f9b3-229f-d900-c248-2b62752a90b8-5d58bebc" data-w-id="abb3f9b3-229f-d900-c248-2b62752a90b8" href="/" class="logo w-inline-block">
+					<div class="text-block">
+						Steglove
+					</div></a>
+					<nav role="navigation" class="nav-menu w-nav-menu">
+						<a data-w-id="766f8515-b7ce-1784-ea1d-a9fffbe7ff7b" href="?tool=exiftool" class="nav-link w-nav-link">Exiftool</a><a data-w-id="766f8515-b7ce-1784-ea1d-a9fffbe7ff7d" href="?tool=zsteg" class="nav-link-2 w-nav-link">Zsteg</a><a data-w-id="766f8515-b7ce-1784-ea1d-a9fffbe7ff7f" href="?tool=binwalk" class="nav-link-3 w-nav-link">Binwalk</a><a data-w-id="700ad703-7419-51a6-d5cf-1d1ce2761fc6" href="https://github.com/Cpp-Gleb/StegLove" target="_blank" class="nav-link-4 w-nav-link">GitHub</a>
+						<div class="sessionsinnav">
+							<div class="text-block-8">
+								Sessions
+							</div><a data-w-id="dd7da530-8145-2ac9-4ff8-4f210cc753ee" href="#" class="sessionlink w-inline-block">
+							<div class="text-block-7">
+								SESSION 1 - Exiftool
+							</div></a>
+						</div>
+					</nav><a id="w-node-_00423f68-edd9-7373-a48a-ffb7fa9904d3-5d58bebc" data-w-id="00423f68-edd9-7373-a48a-ffb7fa9904d3" href="https://github.com/Cpp-Gleb/StegLove" class="link-block-2 w-inline-block">
+					<div class="githubbutton">
+					<div class="text-block-2">
+						Get in GitHub
+					</div><img src="{{ url_for('static', filename='images/github.webp') }}" loading="lazy" width="21" alt="github-201" class="image"></div></a>
+					<div id="w-node-_7294583a-6875-6a32-1703-58c27b7465ea-5d58bebc" class="menu-button w-nav-button">
+						<div class="icon w-icon-nav-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toolsection">
+			<section class="section-2">
+				<div class="div-block-5">
+					<div class="rich-text-block w-richtext">
+						<p class="paragraph">steglove ~$</p>
+						<p>‍</p>
+						<p>{{ result }}</p>
+						<br>
+						<p>{{ result2 }}</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer="defer"></script>
+		<script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	</body>
+</html>
